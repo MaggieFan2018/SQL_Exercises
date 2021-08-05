@@ -1,0 +1,6 @@
+SELECT IFNULL((SELECT num
+FROM my_numbers
+GROUP BY 1
+HAVING COUNT(*) = 1
+ORDER BY 1 DESC
+LIMIT 1), null) num;
